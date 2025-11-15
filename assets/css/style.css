@@ -1,0 +1,137 @@
+/* Reset */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    height: 200vh;
+}
+
+.wrapper {
+    padding-top: 80px; /* mismo alto que el navbar */
+}
+
+
+
+/* Navbar */
+.navbar {
+    position: fixed; /* <--- Esto es lo más importante */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 15px rgba(227, 231, 239, 0.6);
+}
+
+.logo-img {
+    font-size: 24px;
+    color: #e5f9fa;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* Enlaces del menú */
+.navbar-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    color: #e5f9fa;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.4s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #74C0FC;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle div {
+    width: 25px;
+    height: 3px;
+    background-color: #e5f9fa;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 10px;
+    color: #e5f9fa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar-nav {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+  
+    .navbar-nav.active {
+        max-height: 300px;
+        padding: 10px 0;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+
+
+.contenedor-modelo-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.6s ease-in-out;
+  margin-top: 150px;
+    position: relative;
+  z-index: 1;
+  gap: 20px;
+}
+.contenedor-scroll-activo {
+  flex-direction: row; /* cuando haya scroll, en fila */
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+ #modelo, #texto {
+    color: #e5f9fa;
+      z-index: 2;
+  transition: transform 0.8s ease, width 0.6s ease, text-align 0.6s ease;
+}
