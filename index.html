@@ -70,16 +70,22 @@
     src="https://mega.nz/embed/!oK81wQrQ!i_xbdQXhXM7tGQ5P_vCAcBY-RP54jcYt5uDgg1Aa3y0">
     </iframe>
     https://mega.nz/embed/!oK81wQrQ!i_xbdQXhXM7tGQ5P_vCAcBY-RP54jcYt5uDgg1Aa3y0
-<input type="text" id="miInput" value="https://mega.nz/embed/!oK81wQrQ!i_xbdQXhXM7tGQ5P_vCAcBY-RP54jcYt5uDgg1Aa3y0">
-<button onclick="copiar()">Copiar</button>
+<button onclick="copiarYRedirigir()">Copiar y redirigir</button>
 
 <script>
-function copiar() {
-    let input = document.getElementById("miInput");
-    input.select();
-    navigator.clipboard.writeText(input.value);
-    alert("Copiado!");
+function copiarYRedirigir() {
+    let texto = "https://mega.nz/embed/!oK81wQrQ!i_xbdQXhXM7tGQ5P_vCAcBY-RP54jcYt5uDgg1Aa3y0";
+
+    navigator.clipboard.writeText(texto)
+        .then(() => {
+            // Después de copiar, redirige
+            window.location.href = "https://google.com"; 
+        })
+        .catch(err => {
+            alert("Error al copiar: " + err);
+        });
 }
+                                  </script>
 </script>
     <script>
         function toggleDarkMode() {
