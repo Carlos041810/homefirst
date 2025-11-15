@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ocupa al menos toda la altura de la pantalla */
+            margin: 0;
+            background-color: #f0f2f5; /* Un fondo gris claro */
+        }
+        iframe {
+            border: none; /* Elimina cualquier borde por defecto */
+            border-radius: 12px; /* Esquinas redondeadas */
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Sombra suave */
+        }
+    </style>
 </head>
 <body>
-    <video controls width="600">
-        <source src="https://mega.nz/embed/!oK81wQrQ!i_xbdQXhXM7tGQ5P_vCAcBY-RP54jcYt5uDgg1Aa3y0" type="video/mp4">
-        Lo sentimos, tu navegador no soporta videos incrustados.
-    </video>
+    <iframe width="600" height="340" 
+    src="https://mega.nz/embed/!oK81wQrQ!i_xbdQXhXM7tGQ5P_vCAcBY-RP54jcYt5uDgg1Aa3y0">
+    </iframe>
 </body>
 </html>
